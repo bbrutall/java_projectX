@@ -11,7 +11,12 @@
 
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
-        <url-pattern>/dosomething</url-pattern>
+        <url-pattern>/controller</url-pattern>
     </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/oops.html</location>
+    </error-page>
 
 </web-app>
