@@ -8,6 +8,21 @@
 </jsp:include>
 
 <div>
-    Hello jsp ${user}!
+    <c:if test="${user != null}">
+        Hello jsp ${user}!
+    </c:if>
+    <c:if test="${user == null}">
+        Login button
+    </c:if>
+
+    <form action="${pageContext.request.contextPath}/controller">
+        <input name="command" type="hidden" value="login">
+        <input name="login" type="text">
+        <input name="password" type="password">
+        <input type="submit" value="Login">
+        <a href="${pageContext.request.contextPath}/controller"></a>
+
+    </form>
+
 </div>
 <jsp:include page="common/footer.jsp"/>
